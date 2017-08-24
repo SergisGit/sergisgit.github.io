@@ -947,6 +947,7 @@ textarea {
       align-self: stretch;
   background: rgba(255, 255, 255, 0.9);
   color: #005a78;
+  border-radius: 0;
 }
 .gallery__btn_next {
   border-left: none;
