@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SergiS WD</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="main-nav  main-nav_nojs">
+      <input type="checkbox" class="main-nav__check" id="main-nav__check">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#capabilities">Возможности</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#portfolio">Портфолио</a></li>
+        <li class="main-nav__item  main-nav__item_active"><a class="main-nav__link" href="blog.html">Мой блог</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#contacts">Контакты</a></li>
+      </ul>
+      <label for="main-nav__check" class="main-nav__toggle">Открыть меню</label>
+    </nav>
+  </header>
+
+  <main class="main  main_blog">
+    <article class="article">
+      <h1 class="article__title">Модальное окно на чистом CSS.</h1>
+      <p class="article__text">
+        Модальные окна - часто используемый компонент в арсенале веб-разработчика, так как удачно подходит для решения таких задач, как вывод форм регистрации, рекламных блоков, различных сообщений и для многих других целей.
+      </p>
+      <p class="article__text">
+        Модальные окна, как правило, реализуются на JavaScript, но всегда ли это хорошо? Иногда возникает потребность или совсем отказаться от JS, или обеспечить поддержку важного функционала сайта для пользователей без JS. 
+      </p>
+      
+      <p class="article__text">
+        HTML5 и CSS3 дают разработчикам возможность делать некоторые вещи, которые раньше были возможны только с JavaScript, в том числе с необычайной легкостью позволяют реализовать всплывающие окна. 
+      </p>
+      <p class="article__text">
+        Решение задачи возможно двумя способами: это псевдо-класс :target и скрытые чекбоксы. Поговорим сначала о первом.
+      </p>
+      <p class="article__text">
+        Псевдо-класс :target работает так же, как и другие псевдо-классы, такие как :hover или :active. Псевдо-класс :target становится активным, когда хеш в адресной строке браузера совпадает с id указанного элемента. Так, если модальное окно имеет id = "modal", то псевдо-класс :target станет активным, когда хеш в адресной строке будет равен #modal. Используем это для показа модального окна.
+      </p>
+      
+      <h3>HTML</h3>
+      <pre class="article__pre"><code class="article__code">
+&lt;a href="#modal-open"&gt;Open modal&lt;/a&gt;
+
+&lt;div class="modal" id="modal-open"&gt;
+    &lt;div class="modal-container"&gt;
+        &lt;p&gt;text&lt;/p&gt;
+        &lt;a href="#modal-close"&gt;Close&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      
+      <h3>CSS</h3>
+      <pre class="article__pre"><code class="article__code">
+.modal-container {
+    position: fixed;
+    width: 80%;
+    max-width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100vh);
+    transition: transform 0.4s ease-out;
+}
+
+.modal:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw; 
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.4s;
+}
+    
+.modal:target .modal-container {
+    transform: translate(-50%, -50%);
+}
+     
+.modal:target:before {
+    opacity: 1;
+    transform: scale(1);
+}
+      </code></pre>
+      <p class="article__text">
+        Модальное окно имеет два набора стилей, один для неактивного состояния (окно скрыто за пределами экрана), второй для активного. При нажатии на ссылку <code>"#modal-open"</code> наше окно плавно переместится на середину экрана. Кроме этого мы добавили плавное затемнение заднего фона с помощью псевдоэлемента <code>:before</code>.
+      </p>
+      <p class="article__text">
+        Чтобы скрыть модальное окно, нужно всего лишь изменить хеш в адресной строке. Для этого мы используем расположенную прямо в нашем окне ссылку с <code>href="#modal-close"</code> (в адресе закрывающей ссылки можно обойтись и одной лишь решеткой "#"). 
+      </p>
+      <p class="article__text">
+        Так как стили мы прописали не к id модального окна, а к его классу, то мы можем использовать разные модальные окна на странице с разными id и общим классом, а стилизацию отдельных окон обеспечим с помощью добавления классов-модификаторов.
+      </p>
+      <p class="article__text">
+        Что касается чекбоксов, то здесь тоже все банально и просто. Всё что нам нужно - уже в имеющемся коде html перед нашим всплывающем окном добавить скрытый <code>input type="checkbox"</code>, открывающие и закрывающие ссылки заменить на <code>label</code> к данному чекбоксу, а стили переопределить для <code>:checked+</code>. Причём для каждого окна в этом случае  нам придётся создать собственный чекбокс с уникальным id.
+      </p>
+      <div class="article__page-links">
+        <a class="btn article__page-link" href="index.html">На главную</a>
+        <a class="btn article__page-link" href="blog.html">Другие статьи</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__copyright">SergiS Web Development 2017</p>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

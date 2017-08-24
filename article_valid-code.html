@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SergiS WD</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="main-nav  main-nav_nojs">
+      <input type="checkbox" class="main-nav__check" id="main-nav__check">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#capabilities">Возможности</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#portfolio">Портфолио</a></li>
+        <li class="main-nav__item  main-nav__item_active"><a class="main-nav__link" href="blog.html">Мой блог</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#contacts">Контакты</a></li>
+      </ul>
+      <label for="main-nav__check" class="main-nav__toggle">Открыть меню</label>
+    </nav>
+  </header>
+
+  <main class="main  main_blog">
+    <article class="article">
+      <h1 class="article__title">Валидaция кода html и css</h1>
+      <p class="article__text">
+        Существует такое понятие, как валидация или валидность кода. Валидация - это процесс тестирования кода на отсутствие ошибок и его соответствие принятым стандартам, которые задаёт World Wide Web Consortium, W3C. Код, который не содержит ошибок, называется валидным.
+      </p>
+      <p class="article__text">
+        Проверить валидность html и css кода сайта не составит труда, для этого есть специальные сервисы:
+      </p>
+      <ul class="article__ul">
+        <li class="article__li"><a class="article__out-link" href="https://validator.w3.org/">validator.w3.org</a> для html;</li>
+        <li class="article__li"><a class="article__out-link" href="http://jigsaw.w3.org/css-validator/">jigsaw.w3.org/css-validator</a> для css.</li>
+      </ul>
+      <h2 class="article__title2">Зачем нужна проверка валидности html и css кода:</h2>
+      <ul class="article__ul">
+        <li class="article__li">
+          <p class="article__text">
+            Валидность кода сайта позволяет правильно отображать сайт в разных браузерах т.е. вся визуальная и функциональная составляющая сайта отображается и работает правильно. Отображение сайта на экране монитора происходит следующим образом: браузер читает исходный код веб-страницы, расшифровывает его, и результат отображается на вашем экране. Некоторые браузеры, наткнувшись на ошибки код сайта, самостоятельно их исправляют, поэтому страницы с невалидным кодом в таких браузерах будут нормально отображаться. Другие же не исправляют ошибки, и отображают страницу как есть. И в таких браузерах сайт с невалидным кодом будет выглядеть "криво".
+          </p>
+        </li>
+        <li class="article__li">
+          <p class="article__text">
+            Поисковые системамы эффективнее работают с валидным кодом, а роботы поисковых систем отдают большее предпочтение такому сайту, а значит этот сайт будет находиться выше в поисковой выдаче.
+          </p>
+        </li>
+        <li class="article__li">
+          <p class="article__text">
+            Сайт, код которого не содержит ошибок, обрабатывается браузерами быстрее.
+          </p>
+        </li>
+        <li class="article__li">
+          <p class="article__text">
+            Валидатор поможет вам проверить вложенность и правильность закрытия тегов, а также выявит ошибки в синтаксисе css, которые вы сами могли не заметить.
+          </p>
+        </li>
+        <li class="article__li">
+          <p class="article__text">
+            Ещё одна причина - субъективный подход. Валидный код - это показатель профессионализма человека создающего сайт. Есть люди, стремящиеся писать код аккуратно качественно, и есть те, кто не следит за качеством. Кому отдаст работу хоть немного разбирающийся в деле заказчик - ответ очевиден.
+          </p>
+        </li>
+      </ul>
+
+      <p class="article__text">
+        Следует отметить, что валидный код сам по себе еще не гарантирует 100% качество, т.к. большое значение имеет структура кода. При неправильной структуре даже с полностью валидным кодом страница может отображаться неправильно. А иногда возникают ситуации, когда по тем или иным причинам (для решения каких-либо специфических задач или проблем) разработчиком намеренно пишется невалидный код,поэтому в его оценке не все так просто, как может показаться на первый взгляд.
+      </p>
+      <div class="article__page-links">
+        <a class="btn article__page-link" href="index.html">На главную</a>
+        <a class="btn article__page-link" href="blog.html">Другие статьи</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__copyright">SergiS Web Development 2017</p>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

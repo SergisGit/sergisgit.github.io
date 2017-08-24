@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SergiS WD</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="main-nav  main-nav_nojs">
+      <input type="checkbox" class="main-nav__check" id="main-nav__check">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#capabilities">Возможности</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#portfolio">Портфолио</a></li>
+        <li class="main-nav__item  main-nav__item_active"><a class="main-nav__link" href="blog.html">Мой блог</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html#contacts">Контакты</a></li>
+      </ul>
+      <label for="main-nav__check" class="main-nav__toggle">Открыть меню</label>
+    </nav>
+  </header>
+
+  <main class="main  main_blog">
+    <article class="article">
+      <h1 class="article__title">Стилизация HTML5 плэйсхолдера с&nbsp;помощью&nbsp;CSS</h1>
+      <p class="article__text">
+        В HTML5 есть замечательный атрибут <b>placeholder</b>, назначение которого -  вывести подсказку в поле ввода. Задается он следующим образом:  
+      </p>
+      <pre class="article__pre"><code class="article__code">
+  &lt;input type="text" <b>placeholder=</b>"текстовая подсказка"/&gt;
+      </code></pre>
+      <p class="article__text">
+        Обычно подсказка отображается серым цветом, но иногда возникает необходимость стилизовать этот текст с помощью CSS. На данный момент стандартная спецификация не позволяет нам этого делать, и CSS правила для плэйсхолдеров не стандартизированы. Тем не менее разработчики самых популярных браузеров предоставили нам эту возможность.
+      </p>
+      
+      <p class="article__text">
+        Каждый браузер по-своему реализовал поддержку стилизации плэйсхолдеров. В IE и старых firefox (до 18-го) placeholder считается псевдоклассом, а в новых firefox, webkit и blink – псевдоэлементом. 
+      </p>
+      <p class="article__text">
+        Для стилизации плэйсхолдеров используются следующие правила:
+      </p>
+      <ul class="article__ul  article__ul_no-style">
+        <li class="article__li">
+          <pre class="article__pre"><code class="article__code">
+  ::-webkit-input-placeholder { <span>/* WebKit browsers */</span>
+    //Ваши стили
+  }
+          </code></pre>
+        </li>
+        <li class="article__li">
+          <pre class="article__pre"><code class="article__code">
+  :-moz-placeholder { <span>/* Mozilla Firefox 4 to 18 */</span>
+    //Ваши стили
+  }
+          </code></pre>
+        </li>
+        <li class="article__li">
+          <pre class="article__pre"><code class="article__code">
+  ::-moz-placeholder { <span>/* Mozilla Firefox 19+ */</span>
+    //Ваши стили
+  }
+          </code></pre>
+        </li>
+        <li class="article__li">
+          <pre class="article__pre"><code class="article__code">
+  :-ms-input-placeholder { <span>/* Internet Explorer 10+ */</span>
+    //Ваши стили
+  }
+          </code></pre>
+        </li>
+      </ul>
+      <p class="article__text">
+        Если вы используете CSS-препроцессор, то для применения стилей к плэйсхолдерам можно написать простой миксин. Пример на Sass:
+      </p>
+      <pre class="article__pre"><code class="article__code">
+  @mixin placeholder {
+    &amp;::-webkit-input-placeholder { 
+      //Ваши стили 
+    }
+    &amp;:-moz-placeholder           { 
+      //Ваши стили 
+    }
+    &amp;::-moz-placeholder          { 
+      //Ваши стили 
+    }
+    &amp;:-ms-input-placeholder      { 
+      //Ваши стили }  
+  }
+      </code></pre>
+      <p class="article__text">
+        При этом нужно помнить, что совмещать эти селекторы в один нельзя, и если вы напишете:
+      </p>
+      <pre class="article__pre"><code class="article__code">
+  input:-moz-placeholder,
+  input::-webkit-input-placeholder { }
+      </code></pre>
+      <p class="article__text">
+        то CSS правила работать не будут.
+      </p>
+      <h3>Список поддерживаемых CSS стилей для атрибута placeholder:</h3>
+      <ul class="article__ul">
+        <li class="article__li">background </li>
+        <li class="article__li">color</li>
+        <li class="article__li">font</li>
+        <li class="article__li">letter-spacing</li>
+        <li class="article__li">line-height</li>
+        <li class="article__li">opacity</li>
+        <li class="article__li">text-decoration</li>
+        <li class="article__li">text-indent</li>
+        <li class="article__li">text-overflow</li>
+        <li class="article__li">text-transform</li>
+        <li class="article__li">vertical-align</li>
+        <li class="article__li">word-spacing</li>
+      </ul>
+      <p class="article__text">
+        Разные браузеры по разному реализуют сокрытие плэйсхолдера: в одних при получении фокуса инпутом, в других - при вводе первого символа. Второй вариант нередко вводит в ступор людей, которые не знают, что это такое. Они пытаются выделить этот текст и удалить, вместо того, чтобы просто начать печатать. Что ж, это досадное недоразумение  с легкостью решается с помощью преведённого выше кода. Достаточно задать плэйсхолдеру прозрачный цвет при фокусе на поле ввода:
+      </p>
+        <pre class="article__pre"><code class="article__code">
+  :focus::-webkit-input-placeholder {color: transparent}
+  :focus::-moz-placeholder          {color: transparent}
+  :focus:-moz-placeholder           {color: transparent}
+  :focus:-ms-input-placeholder      {color: transparent}
+        </code></pre>
+      <p class="article__text">
+        Можно также добавить <b>transition</b> для плавного появления и скрытия плэйсхолдера. А вместо прозрачности - задать <b>translate</b>, и плэйсхолдер будет красиво уезжать и скрываться за пределами поля ввода.
+      </p>
+      <div class="article__page-links">
+        <a class="btn article__page-link" href="index.html">На главную</a>
+        <a class="btn article__page-link" href="blog.html">Другие статьи</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__copyright">SergiS Web Development 2017</p>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
