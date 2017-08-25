@@ -993,6 +993,10 @@ textarea {
 .gallery__photo_small:hover .gallery__caption {
   opacity: 0;
 }
+.gallery__photo_small:hover .gallery__caption span {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
 .gallery__photo_small:hover::before,
 .gallery__photo_small:hover::after {
   -webkit-transform: scaleY(1);
@@ -1236,6 +1240,10 @@ textarea {
           box-sizing: border-box;
   width: 100%;
   padding: 65px 2% 50px;
+}
+.article__image_center {
+  display: block;
+  margin: auto;
 }
 .article__title {
   text-align: center;
