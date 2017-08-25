@@ -30,7 +30,7 @@
         В HTML5 есть замечательный атрибут <b>placeholder</b>, назначение которого -  вывести подсказку в поле ввода. Задается он следующим образом:  
       </p>
       <pre class="article__pre"><code class="article__code">
-  &lt;input type="text" <b>placeholder=</b>"текстовая подсказка"/&gt;
+  &lt;input type="text" <b>placeholder=</b>"подсказка"/&gt;
       </code></pre>
       <p class="article__text">
         Обычно подсказка отображается серым цветом, но иногда возникает необходимость стилизовать этот текст с помощью CSS. На данный момент стандартная спецификация не позволяет нам этого делать, и CSS правила для плэйсхолдеров не стандартизированы. Тем не менее разработчики самых популярных браузеров предоставили нам эту возможность.
@@ -45,28 +45,32 @@
       <ul class="article__ul  article__ul_no-style">
         <li class="article__li">
           <pre class="article__pre"><code class="article__code">
-  ::-webkit-input-placeholder { <span>/* WebKit browsers */</span>
+  /* WebKit browsers */
+  ::-webkit-input-placeholder {
     //Ваши стили
   }
           </code></pre>
         </li>
         <li class="article__li">
           <pre class="article__pre"><code class="article__code">
-  :-moz-placeholder { <span>/* Mozilla Firefox 4 to 18 */</span>
+  /* Mozilla Firefox 4 to 18 */
+  :-moz-placeholder {
     //Ваши стили
   }
           </code></pre>
         </li>
         <li class="article__li">
           <pre class="article__pre"><code class="article__code">
-  ::-moz-placeholder { <span>/* Mozilla Firefox 19+ */</span>
+  /* Mozilla Firefox 19+ */
+  ::-moz-placeholder {
     //Ваши стили
   }
           </code></pre>
         </li>
         <li class="article__li">
           <pre class="article__pre"><code class="article__code">
-  :-ms-input-placeholder { <span>/* Internet Explorer 10+ */</span>
+  /* Internet Explorer 10+ */
+  :-ms-input-placeholder {
     //Ваши стили
   }
           </code></pre>
@@ -116,7 +120,7 @@
         <li class="article__li">word-spacing</li>
       </ul>
       <p class="article__text">
-        Разные браузеры по разному реализуют сокрытие плэйсхолдера: в одних при получении фокуса инпутом, в других - при вводе первого символа. Второй вариант нередко вводит в ступор людей, которые не знают, что это такое. Они пытаются выделить этот текст и удалить, вместо того, чтобы просто начать печатать. Что ж, это досадное недоразумение  с легкостью решается с помощью преведённого выше кода. Достаточно задать плэйсхолдеру прозрачный цвет при фокусе на поле ввода:
+        Разные браузеры по-разному реализуют сокрытие плэйсхолдера: в одних при получении фокуса инпутом, в других - при вводе первого символа. Второй вариант нередко вводит в ступор людей, которые не знают, что это такое. Они пытаются выделить этот текст и удалить, вместо того, чтобы просто начать печатать. Что ж, это досадное недоразумение  с легкостью решается с помощью преведённого выше кода. Достаточно задать плэйсхолдеру прозрачный цвет при фокусе на поле ввода:
       </p>
         <pre class="article__pre"><code class="article__code">
   :focus::-webkit-input-placeholder {color: transparent}
