@@ -109,10 +109,6 @@ if (bodyIndex) {
   blog3.style.opacity = "0";
   blog4.style.opacity = "0";
   
-  contactForm.style.opacity = "0";
-
- 
-
   function scrolling(e) {
 
     if (isFullyVisible(cTitle)) {
@@ -126,9 +122,6 @@ if (bodyIndex) {
     }
     if (isPartiallyVisible(galleryS)) {
       galleryS.style.animation = "zoomIn 1s forwards";
-    }
-    if (isPartiallyVisible(contactForm)) {
-      contactForm.style.animation = "bounceInUp 1s forwards";
     }
 
     if (isPartiallyVisible(blog1)) {
