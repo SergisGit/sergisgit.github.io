@@ -98,6 +98,8 @@ if (bodyIndex) {
   var blog2 = document.querySelector(".myblog__article_second");
   var blog3 = document.querySelector(".myblog__article_third");
   var blog4 = document.querySelector(".myblog__article_fourth");
+  
+  var cLinks = document.querySelector(".contact-links");
 
   cTitle.style.opacity = "0";
   iconsF.style.opacity = "0";
@@ -108,6 +110,8 @@ if (bodyIndex) {
   blog2.style.opacity = "0";
   blog3.style.opacity = "0";
   blog4.style.opacity = "0";
+  
+  cLinks.style.opacity = "0";
   
   function scrolling(e) {
 
@@ -121,20 +125,23 @@ if (bodyIndex) {
       iconsS.style.animation = "bounceInRight 1s forwards";
     }
     if (isPartiallyVisible(galleryS)) {
-      galleryS.style.animation = "zoomIn 1s forwards";
+      galleryS.style.animation = "fadeIn 1.5s forwards";
     }
 
     if (isPartiallyVisible(blog1)) {
-      blog1.style.animation = "fadeIn 1.5s forwards";
+      blog1.style.animation = "zoomIn 1s forwards";
     }
     if (isPartiallyVisible(blog2)) {
-      blog2.style.animation = "fadeIn 1.5s forwards";
+      blog2.style.animation = "zoomIn 1s forwards";
     }
     if (isPartiallyVisible(blog3)) {
-      blog3.style.animation = "fadeIn 1.5s forwards";
+      blog3.style.animation = "zoomIn 1s forwards";
     }
     if (isPartiallyVisible(blog4)) {
-      blog4.style.animation = "fadeIn 1.5s forwards";
+      blog4.style.animation = "zoomIn 1s forwards";
+    }
+    if (isPartiallyVisible(cLinks)) {
+      cLinks.style.animation = "bounceInUp 1s forwards";
     }
 
   }

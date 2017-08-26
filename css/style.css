@@ -2300,8 +2300,8 @@ textarea {
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(0.7, 0.7, 0.7);
-            transform: scale3d(0.7, 0.7, 0.7);
+    -webkit-transform: scale3d(0.95, 0.95, 1);
+            transform: scale3d(0.95, 0.95, 1);
   }
   100% {
     opacity: 1;
@@ -2310,8 +2310,8 @@ textarea {
 @keyframes zoomIn {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(0.7, 0.7, 0.7);
-            transform: scale3d(0.7, 0.7, 0.7);
+    -webkit-transform: scale3d(0.95, 0.95, 1);
+            transform: scale3d(0.95, 0.95, 1);
   }
   100% {
     opacity: 1;
@@ -2466,28 +2466,6 @@ textarea {
   }
   .pc-text {
     display: inline;
-  }
-}
-@media (min-width: 1500px) {
-  .capabilities {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .capabilities::before,
-  .capabilities::after {
-    display: block;
-    content: "";
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    background-size: auto 80%;
-    background-position: center 55%;
-    background-repeat: no-repeat;
   }
 }
 @media (max-width: 767px) {
