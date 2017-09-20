@@ -949,6 +949,7 @@ textarea {
       align-self: stretch;
   background: rgba(255, 255, 255, 0.9);
   color: #005a78;
+  border: none;
   border-radius: 0;
 }
 .gallery__btn_next {
@@ -959,6 +960,7 @@ textarea {
 }
 .gallery__btn:hover {
   background-color: rgba(255, 255, 255, 0.95);
+  border: none;
 }
 .gallery__small {
   position: relative;
