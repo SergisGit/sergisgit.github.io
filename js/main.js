@@ -97,11 +97,7 @@
     var iconsS = document.querySelector(".capabilities__icons_second");
     var galleryS = document.querySelector(".gallery__small");
 
-    var blog1 = document.querySelector(".myblog__article_first");
-    var blog2 = document.querySelector(".myblog__article_second");
-    var blog3 = document.querySelector(".myblog__article_third");
-    var blog4 = document.querySelector(".myblog__article_fourth");
-
+    var blogArticles = document.querySelectorAll(".myblog__article");
     var cLinks = document.querySelector(".contact-links");
 
     cTitle.style.opacity = "0";
@@ -109,10 +105,9 @@
     iconsS.style.opacity = "0";
     galleryS.style.opacity = "0";
 
-    blog1.style.opacity = "0";
-    blog2.style.opacity = "0";
-    blog3.style.opacity = "0";
-    blog4.style.opacity = "0";
+    for (i = 0; i < blogArticles.length; i += 1) {
+      blogArticles[i].style.opacity = "0";
+    }
 
     cLinks.style.opacity = "0";
 
@@ -131,18 +126,12 @@
         galleryS.style.animation = "fadeIn 1.5s forwards";
       }
 
-      if (isPartiallyVisible(blog1)) {
-        blog1.style.animation = "zoomIn 1s forwards";
+      for (i = 0; i < blogArticles.length; i += 1) {
+        if (isPartiallyVisible(blogArticles[i])) {
+          blogArticles[i].style.animation = "zoomIn 1s forwards";
+        }
       }
-      if (isPartiallyVisible(blog2)) {
-        blog2.style.animation = "zoomIn 1s forwards";
-      }
-      if (isPartiallyVisible(blog3)) {
-        blog3.style.animation = "zoomIn 1s forwards";
-      }
-      if (isPartiallyVisible(blog4)) {
-        blog4.style.animation = "zoomIn 1s forwards";
-      }
+      
       if (isPartiallyVisible(cLinks)) {
         cLinks.style.animation = "bounceInUp 1s forwards";
       }

@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://sergiswd.ru/"/>
   <meta property="og:image" content="https://sergiswd.ru/img/socicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?ver=6">
+  <link rel="stylesheet" href="css/style.min.css?ver=7">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
@@ -132,10 +132,18 @@
         Разные браузеры по-разному реализуют сокрытие плэйсхолдера: в одних при получении фокуса инпутом, в других - при вводе первого символа. Второй вариант нередко вводит в ступор людей, которые не знают, что это такое. Они пытаются выделить этот текст и удалить, вместо того, чтобы просто начать печатать. Что ж, это досадное недоразумение  с легкостью решается с помощью преведённого выше кода. Достаточно задать плэйсхолдеру прозрачный цвет при фокусе на поле ввода:
       </p>
         <pre class="article__pre"><code class="article__code">
-  :focus::-webkit-input-placeholder {color: transparent}
-  :focus::-moz-placeholder          {color: transparent}
-  :focus:-moz-placeholder           {color: transparent}
-  :focus:-ms-input-placeholder      {color: transparent}
+  :focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  :focus::-moz-placeholder {
+    color: transparent
+  }
+  :focus:-moz-placeholder {
+    color: transparent
+  }
+  :focus:-ms-input-placeholder {
+    color: transparent
+  }
         </code></pre>
       <p class="article__text">
         Можно также добавить <b>transition</b> для плавного появления и скрытия плэйсхолдера. А вместо прозрачности - задать <b>translate</b>, и плэйсхолдер будет красиво уезжать и скрываться за пределами поля ввода.
