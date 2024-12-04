@@ -1,0 +1,48 @@
+.home {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+  @media @bw1340 {
+    padding: 80px 0;
+  }
+  &__main-header {
+    margin-bottom: 100px;
+    @media @bw1340 {
+      margin-bottom: 75px;
+    }
+    @media @bw768 {
+      margin-bottom: 40px;
+    }
+  }
+  &__offers {
+    margin: 0 auto 200px;
+    @media @bw1340 {
+      margin-bottom: 130px;
+    }
+    @media @bw768 {
+      margin-bottom: 100px;
+    }
+  }
+  &__container {
+    .container;
+  }
+  &__about {
+    margin-bottom: 90px;
+  }
+  &__upcoming {
+    margin-bottom: 65px;
+  }
+  &__listing {
+    margin-bottom: 95px;
+  }
+  &__contacts {
+    margin-bottom: 150px;
+    @media @bw1660 {
+      margin-bottom: 130px;
+    }
+    @media @bw1340 {
+      margin-bottom: 120px;
+    }
+  }
+}

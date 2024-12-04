@@ -1,0 +1,188 @@
+<form
+  class="reserve @@class"
+  id="js-reserve"
+  data-price='{"red": 1400, "black": 1250 }'
+>
+  <div class="reserve__checks" id="js-reserveChecks">
+    <h4 class="reserve__section-title reserve__section-title--mb30">
+      Забронировать столик
+    </h4>
+
+    <label class="reserve__check check check--red">
+      <input
+        type="checkbox"
+        name="table_1"
+        class="check__input js-reserveCheck"
+        data-type="red"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 1 стол </span>
+    </label>
+
+    <label class="reserve__check check">
+      <input
+        type="checkbox"
+        name="table_2"
+        class="check__input js-reserveCheck"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 2 стол </span>
+    </label>
+
+    <label class="reserve__check check">
+      <input
+        type="checkbox"
+        name="table_3"
+        class="check__input js-reserveCheck"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 3 стол </span>
+    </label>
+
+    <label class="reserve__check check check--red">
+      <input
+        type="checkbox"
+        name="table_4"
+        class="check__input js-reserveCheck"
+        data-type="red"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 4 стол </span>
+    </label>
+
+    <label class="reserve__check check check--disabled">
+      <input
+        type="checkbox"
+        name="table_5"
+        class="check__input js-reserveCheck"
+        disabled
+      />
+      <span class="check__mark"></span>
+      <span class="check__label">5 стол </span>
+    </label>
+
+    <label class="reserve__check check">
+      <input
+        type="checkbox"
+        name="table_6"
+        class="check__input js-reserveCheck"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 6 стол </span>
+    </label>
+
+    <label class="reserve__check check check--red">
+      <input
+        type="checkbox"
+        name="table_7"
+        class="check__input js-reserveCheck"
+        data-type="red"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 7 стол </span>
+    </label>
+
+    <label class="reserve__check check check--red">
+      <input
+        type="checkbox"
+        name="table_8"
+        class="check__input js-reserveCheck"
+        data-type="red"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 8 стол </span>
+    </label>
+
+    <label class="reserve__check check check--red">
+      <input
+        type="checkbox"
+        name="table_9"
+        class="check__input js-reserveCheck"
+        data-type="red"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 9 стол </span>
+    </label>
+
+    <label class="reserve__check check">
+      <input
+        type="checkbox"
+        name="table_10"
+        class="check__input js-reserveCheck"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 10 стол </span>
+    </label>
+
+    <label class="reserve__check check">
+      <input
+        type="checkbox"
+        name="table_11"
+        class="check__input js-reserveCheck"
+      />
+      <span class="check__mark"></span>
+      <span class="check__label"> 11 стол </span>
+    </label>
+  </div>
+
+  <div class="reserve__scheme">
+    <div class="reserve__scheme-container">
+      <h4 class="reserve__scheme-title">Сцена</h4>
+      <div class="reserve__scheme-wrapper">@@include('scene.html')</div>
+    </div>
+  </div>
+
+  <div class="reserve__order">
+    <h4 class="reserve__section-title">Ваши пригласительные билеты</h4>
+
+    <div
+      class="reserve__tickets-list"
+      id="js-reserveTicketsList"
+      data-caption="шт."
+      data-currency="₽"
+    >
+      <!-- <div class="reserve__tickets">
+        <div class="reserve__qty" data-caption="шт." data-price="1400">0</div>
+        <div class="reserve__sum" data-currency="₽">0</div>
+      </div>
+
+      <div class="reserve__tickets">
+        <div class="reserve__qty" data-caption="шт." data-price="1250">0</div>
+        <div class="reserve__sum" data-currency="₽">0</div>
+      </div> -->
+    </div>
+
+    <div class="reserve__total" data-caption="Сумма" data-currency="₽" id="js-reserveTotal"></div>
+
+    <button type="submit" class="btn btn--red btn--disabled reserve__submit" id="js-reserveSubmit">
+      Купить билеты
+    </button>
+  </div>
+
+  <div class="reserve__legend">
+    <div class="reserve__price">
+      <h4 class="reserve__section-title">Стоимость пригласительного билета</h4>
+
+      <div
+        class="reserve__price-list"
+        id="js-reservePriceList"
+        data-caption="₽ | 1 персона"
+      >
+        <!-- <div
+          class="reserve__price-item reserve__price-item--red"
+          data-caption="₽ | 1 персона"
+        >
+          1400
+        </div>
+        <div class="reserve__price-item" data-caption="₽ | 1 персона">1250</div> -->
+      </div>
+    </div>
+
+    <div class="reserve__notation">
+      <h4 class="reserve__section-title">Примечание</h4>
+
+      <div class="reserve__note reserve__note--free">доступные места</div>
+      <div class="reserve__note reserve__note--booked">забронировано</div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f2f5;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 0 0 40px;
+      color: #1c232b;
+      font-size: 2rem;
+      line-height: 1.25;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 50px;
+      margin: 0 auto;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 50px;
+      border-radius: 2px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 2px rgba(6, 33, 63, 0.13);
+      overflow: hidden;
+    }
+
+    .list:last-child {
+      margin: 0;
+    }
+
+    .list a {
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid #E3E8EF;
+      color: #756193;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .list a:hover {
+      border-bottom-color: #8870ad;
+      background: #8870ad;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Список страниц</h1>
+
+    <div class="list">
+      <a href="index.html" target="_blank">Главная</a>
+      <a href="events.html" target="_blank">Мероприятия</a>
+      <a href="event.html" target="_blank">Мероприятиe (детальная)</a>
+      <a href="default.html" target="_blank">Стандартная страница</a>
+    </div>
+
+  </div>
+</body>
+
+</html>

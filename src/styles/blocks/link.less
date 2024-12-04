@@ -1,0 +1,28 @@
+.link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  transition: color 0.2s;
+  @media @bw768 {
+    font-size: 14px;
+    line-height: 19px; 
+  }
+  &:active {
+    color: @red;
+    .link__arrow {
+      color: @red;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: @red;
+      .link__arrow {
+        color: @red;
+      }
+    }
+  }
+  &__arrow {
+    margin-left: 20px;
+  }
+}

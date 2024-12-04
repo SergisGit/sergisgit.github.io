@@ -1,0 +1,168 @@
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  @media @bw1340 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media @bw768 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.width_624 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 624px;
+  @media @bw1660 {
+    max-width: 604px;
+  }
+  @media @bw1340 {
+    max-width: 566px;
+  }
+}
+
+.show-block {
+  display: block;
+}
+
+.show-flex {
+  display: flex;
+}
+
+.hide-block {
+  display: none;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.is-ios * {
+  cursor: pointer;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+}
+
+.custom-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6C6C6C transparent;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #6C6C6C;
+  }
+}
+
+.custom-scroll-x {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6C6C6C transparent;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #6C6C6C;
+  }
+}
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+
+  .page-header__nav-toggle {
+    &::before {
+      transform: translate(0px, 6px) rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transform: translate(0px, -6px) rotate(-45deg);
+    }
+  }
+}
+
+.show-event-popup {
+  body {
+    overflow: hidden;
+  }
+
+  #js-eventPP {
+    display: flex;
+  }
+}
+
+.pp-overflow {
+  overflow: hidden;
+}
+
+
+
+.is-hidden {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

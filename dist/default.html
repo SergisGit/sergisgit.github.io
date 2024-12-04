@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <link rel="stylesheet" href="styles/styles.min.css?ver=0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicons/favicon.ico">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#bc3324">
+
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+
+  <meta name="theme-color" content="#dedede">
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+
+  <script>
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+        {
+          document.write('<script src="scripts/svg4everybody.min.js"><\/script>');
+          document.write('<script src="scripts/picturefill.min.js"><\/script>');
+          document.write('<script src="scripts/fitie.min.js"><\/script>');
+        }
+  </script>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <script src="scripts/toastr.min.js"></script>
+  <script type="text/javascript">
+    Command: toastr["success"]("Вы все сделали правильно", "Успех!")
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "2500",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }   
+
+    toastr["success"](`<div><div class="toast-title">Заголовок</div><div class="toast-message">adsads</div><div class="toast-btns"><a href="#" class="btn  btn--red toast-btn">Вход</a><a href="#" class="btn toast-btn">Регистрация</a></div></div>`)
+  </script>
+</head>
+
+<body class="body">
+  <header class="page-header">
+    <div class="page-header__container">
+      <a href="#" class="page-header__logo">
+        <svg class="page-header__logo-icon" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
+      </a>
+
+      <nav class="page-header__nav">
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="breadcrumbs">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+      <a href="#" class="breadcrumbs__link">Раздел</a>
+      <a class="breadcrumbs__link">Страница раздела</a>
+    </div>
+
+    <article class="article">
+      <div class="article__container">
+        <h1 class="article__title title">Заголовок страницы</h1>
+
+        <div class="article__content content">
+          <h1>Заголовок h1</h1>
+          <h2>Заголовок h2</h2>
+          <h3>Заголовок h3</h3>
+          <h4>Заголовок h4</h4>
+          <h5>Заголовок h5</h5>
+          <h6>Заголовок h6</h6>
+
+          <br />
+
+          <h5>Бесполезный текст</h5>
+          <p>
+            С точки зpения банальной эpyдиции каждый индивидyyм, кpитически
+            мотивиpyющий абстpакцию, не может игноpиpовать кpитеpии
+            yтопического сyбьективизма, концептyально интеpпpетиpyя
+            общепpинятые <b>дефанизиpyющие поляpизатоpы</b>.
+          </p>
+
+          <p>
+            Поэтомy <a href="#">консенсyс</a>, достигнyтый диалектической
+            матеpиальной классификацией всеобщих мотиваций в паpадогматических
+            связях пpедикатов, pешает пpоблемy yсовеpшенствования фоpмиpyющих
+            геотpансплантационных квазипyзлистатов всех кинетически
+            коpеллиpyющих аспектов.
+          </p>
+
+          <br />
+
+          <h5>Ненумерованный список</h5>
+
+          <ul>
+            <li>Елемент списка 1</li>
+            <li>Елемент списка 2</li>
+            <li>Елемент списка 3</li>
+            <li>Елемент списка 4</li>
+          </ul>
+
+          <h5>Нумерованный список</h5>
+
+          <ol>
+            <li>Елемент списка 1</li>
+            <li>Елемент списка 2</li>
+            <li>Елемент списка 3</li>
+            <li>Елемент списка 4</li>
+          </ol>
+
+          <br />
+
+          <h5>Цитата</h5>
+
+          <blockquote>
+            Трансцендентная дискретизация контрамоции не должна аннигилировать
+            с ка-гамма-плазмоином в мю-дельта-ионопластовой среде.
+          </blockquote>
+
+          <p>
+            Нельзя забывать, что разлагая ультрамасштабированную
+            гиперонноаттрофированную неквантованную функцию аппроксимирования
+            позитронного стабилотрона в ряд декомпрессированных математических
+            экзистенциальных субрудиментов, необходимо прибегнуть к методу
+            упорядочивания гипертронических дисперсионных антикварков.
+          </p>
+
+          <img src="assets/images/about_1.jpg" alt="Подпись картинки">
+
+          <p>
+            Остаётся лишь добавить, что предложенный вами конгрессивный подход
+            к декуляризированию «индивидyyма, кpитически мотивиpyющего
+            абстpакцию» является неприемлимым в данном временном континууме на
+            данном этапе научно-технического прогресса/
+          </p>
+
+          <iframe src="https://www.youtube.com/embed/_WcWHZc8s2I"></iframe>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__border"></div>
+
+    <div class="page-footer__wrapper">
+      <nav class="page-footer__nav">
+        <a href="#" class="page-footer__nav-link">Календарь мероприятий</a>
+        <a href="#" class="page-footer__nav-link">Провести мероприятие</a>
+        <a href="#" class="page-footer__nav-link">Стать арендатором</a>
+        <a href="#" class="page-footer__nav-link">Наши проекты</a>
+        <a href="#" class="page-footer__nav-link">Контакты</a>
+      </nav>
+
+      <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+        <h4 class="subscribe-form__title">
+          Подпишись и будь в курсе происходящего
+        </h4>
+
+        <div class="subscribe-form__wrapper">
+          <div class="subscribe-form__field-wrapper">
+            <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
+          </div>
+
+          <button type="submit" class="subscribe-form__submit">
+            Подписаться
+          </button>
+        </div>
+
+        <label class="subscribe-form__check check">
+          <input type="checkbox" name="agree" class="check__input" required checked />
+          <span class="check__mark"></span>
+          <span class="check__label check__label--s">
+            Согласен на обработку персональных данных
+          </span>
+        </label>
+      </form>
+    </div>
+
+    <div class="page-footer__vault">
+      <div class="page-footer__terms">
+        <div class="page-footer__copyrights">© Millennials 2022</div>
+
+        <div class="page-footer__terms-links">
+          <a href="#" class="page-footer__terms-link">Политика конфедециальности</a>
+          <a href="#" class="page-footer__terms-link">Cookies</a>
+        </div>
+      </div>
+
+      <div class="page-footer__socials socials">
+        <a href="#" rel="nofollow noreferrer noopener" class="socials__link">
+          <svg class="socials__icon" width="58" height="58">
+            <use xlink:href="assets/icons/symbols.svg#soc_insta"></use>
+          </svg>
+        </a>
+        <a href="#" class="socials__link">
+          <svg class="socials__icon" width="58" height="58">
+            <use xlink:href="assets/icons/symbols.svg#soc_vk"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="page-footer__devs">
+        <a href="#" class="page-footer__devs-link">
+          Создание и продвижение
+
+          <svg class="page-footer__devs-icon" width="56" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+
+  <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

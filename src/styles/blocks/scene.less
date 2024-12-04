@@ -1,0 +1,28 @@
+.scene {
+  &__table {
+    cursor: pointer;
+    &--active {
+      .scene__table-group {
+        fill: @black;
+      }
+      .scene__table-num {
+        fill: @white;
+      }
+      &.scene__table--red {
+        .scene__table-group {
+          fill: @red;
+        }
+      }
+    }
+    &--disabled {
+      pointer-events: none;
+      .scene__table-group {
+        fill: @gray_dark;
+        stroke: @gray_dark;
+      }
+      .scene__table-num {
+        fill: @black;
+      }
+    }
+  }
+}
